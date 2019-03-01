@@ -1,0 +1,24 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Hworld $hworld
+ */
+?>
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+    <ul class="side-nav">
+        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= $this->Html->link(__('List Hworld'), ['action' => 'index']) ?></li>
+    </ul>
+</nav>
+<div class="hworld form large-9 medium-8 columns content">
+    <?= $this->Form->create($hworld) ?>
+    <fieldset>
+        <legend><?= __('Add Hworld') ?></legend>
+        <?php
+            echo $this->Form->control('vkey');
+            echo $this->Form->control('vvalue');
+        ?>
+    </fieldset>
+    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->end() ?>
+</div>
